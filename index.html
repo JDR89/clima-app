@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>App clima</title>
+  </head>
+  <body>
+    <main>
+      <div class="form-caja">
+        <form id="buscador-form">
+          <div id="buscador-caja">
+            <input
+              id="buscador"
+              type="text"
+              autocomplete="off"
+              placeholder="Buscar ciudad..."
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="caja-card">
+        <div id="clima-card">
+          <div id="ciudad" class="ciudad">Esa ciudad no existe</div>
+          
+            <div id="fecha" class="fecha"></div>
+            
+          
+          <div class="temperatura">
+            <img
+              id="imagen-termometro"
+              class="imagen-termometro"
+              src="images/819-hot-temperature-lineal.gif"
+            />
+            <div id="temperatura-valor" class="temperatura-valor"></div>
+          </div>
+          <div id="contenedor-clima">
+            <div class="caja-gif">
+              <div id="imagenGif"></div>
+            </div>
+          </div>
+          <div id="clima" class="clima"></div>
+          <div id="max-min" class="max-min"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
