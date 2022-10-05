@@ -25,7 +25,9 @@ function busqueda(query){
         clima.innerHTML=data.weather[0].description
         gif=data.weather[0].description
         if(gif==="cielo claro"){
-        valor="images/cieloClaro.gif"
+            if(hora>12){
+
+            }
         }else if(gif === "nubes"){
             valor="images/nube.gif"
         }else if(gif === "lluvia ligera"){
@@ -42,6 +44,8 @@ function busqueda(query){
             valor="images/muyNublado.gif"
         }else if(gif === "chubasco de ligera intensidad"){
             valor="images/lluvia.gif"
+        }else if(gif === "tormenta con lluvia ligera"){
+            valor="images/tormenta.gif"
         }
         imagenGif.innerHTML=`<img class="gif" src="${valor}"/>`
         maxMin.innerHTML=`${toCelcius(data.main.temp_max)} °C / ${toCelcius(data.main.temp_min)} °C`
@@ -52,8 +56,8 @@ function busqueda(query){
             text: "Esa ciudad no existe",
             duration: 2500,
             offset: {
-              x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-              y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+              x: 50, 
+              y: 10 
             },
           }).showToast();
 
